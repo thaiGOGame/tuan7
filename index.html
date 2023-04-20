@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .Warpper {
+        display: flex;
+        flex-direction: column;
+    }
+    .DisplayRow{
+        display:flex;
+        flex-direction: row;
+    }
+    
+    #Header {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #Header_left {
+        display: flex;
+        justify-content: space-around;
+        width: 25%;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    #Header_middle {
+        display: flex;
+        justify-content: space-around;
+        width: 33.3%;
+    }
+    
+    #Header_right {
+        display: flex;
+        justify-content: space-evenly;
+        width: 25%;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    #Banner {
+       align-self: center;
+    }
+    
+    #Button_product {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    
+    #Button_shop_now {
+        margin: 2% auto;
+    }
+    .WhiteTextGreenBorderButton{
+        border-radius: 5px;
+        text-align: center;
+        background-color: whitesmoke;
+        color: green;
+        width: 200px;
+        height: 25px;
+        font-size: 20px;
+        padding: 13px;
+        margin: 2px;
+        border: solid 1px green;
+    }
+    .tab{
+        width: 350px;
+        position: relative;
+        height: auto;
+    }
+    #Product {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    .flex_center{
+        display: flex;
+        justify-content: center;
+        gap:2%;
+    }
+    .flex{
+        display: flex;
+        gap:2%;
+    }
+    
+    .text_center{
+        text-align: center;
+    }
+    .container {
+        position: relative;
+    }
+    #video{
+        width: 100%;
+    }
+    .Product_class {
+        position: relative;
+        text-align: start;
+    }
+    #Language{
+        background-color: black;
+        color: white;
+    }
+    .inlineblock {
+        position: relative;
+        display:inline-block;
+        text-align: center;
+    }
+    
+    .text_position_01 {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        text-align: start;
+        width: 200px;
+    }
+    
+    
+    .greenbutton {
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+        width: 200px;
+        height: 25px;
+        font-size: 20px;
+        padding: 13px;
+        margin: 2px;
+        text-align: center;
+    }
+    
+    .whitebutton {
+        border-radius: 5px;
+        background-color: whitesmoke;
+        color: green;
+        width: 200px;
+        height: 25px;
+        font-size: 20px;
+        padding: 13px;
+        margin: 2px;
+    }
+    .blackbutton{
+        color:white;
+        background-color: black;
+        width: 150;
+        height: 25px;
+        font-size: 18px;
+        padding: 13px;
+        position: absolute;
+        right:10%;
+        bottom:10%;
+    }
+    .greentext {
+        color: green;
+        padding: 20px;
+        font-size: 20px;
+    }
+    .orangebutton {
+        border-radius: 5px;
+        background-color: orange;
+        color: white;
+        width: 200px;
+        height: 25px;
+        font-size: 20px;
+        text-align: center;
+        padding: 13px;
+        margin: 2px;
+    }
+    .Order_Cart{
+        position: absolute;
+        right: 0px;
+    }
+    #Explore_Now{
+        position: absolute;
+        bottom: 50px;
+        left: 0px;
+    }
+    #Sub_Button_01{
+        position: absolute;
+        bottom: 0px;
+    }
+    #Sub_Button_02{
+        position: absolute;
+        bottom: 0px;
+        left: 50px;
+    }
+    .grid_container{
+        display:grid;
+        grid-template-columns: 190px 190px 190px 190px;
+        gap:0px;
+        margin-left: 33%;
+        margin-bottom: 5%;
+    }
+    #Footer{
+        display: flex;
+        color: white;
+        background-color: black;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #Footer_Left{
+        display: flex;
+        margin: 60px 80px;
+    }
+    .Footer_Left_Tab{
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 200px;
+    }
+    .Footer_Left_Item{
+        margin: 6%;
+        margin-left: 0px;
+    }
+    #Footer_Right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 60px 80px;
+        width: 400px;
+    }
+    #Input_Email_Tag{
+        display: flex;
+        border-radius: 10px;
+        width: auto;
+        height: 50px;
+        border: solid 1px white;
+        justify-content: space-between;
+    }
+    #Button_Subcribe{
+        width: 100px;
+        height: auto;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-right: 10px;
+    }
+    .Footer_Right_Item{
+        margin: 6%;
+        margin-left: 0px;
+    }
+</style>
+
+<body>
+    <div class="Warpper">
+        <div id="Header">
+            <div id="Header_left">
+                <div id="Header_left_shop">Shop</div>
+                <div id="Header_left_offers">Offers</div>
+                <div id="Header_left_ourstory">Our story</div>
+                <div id="Header_left_blog">Blog</div>
+            </div>
+            <div id="Header_middle">
+                <img src="Picture/logo.png" alt="">
+            </div>
+            <div id="Header_right">
+                <div id="Input_search">
+                    <input type="text" id="Textfield_search" placeholder="🔍Search product...">
+                </div>
+                <div id="Image_cart">
+                    <img src="Picture/cart.png" alt="">
+                </div>
+                <div id="Image_user">
+                    <img src="Picture/user.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="Banner">
+            <div class="container">
+                <img src="Picture/banner.png" alt="">
+                <div class="text_position_01">
+                    <h3>Gift for your skin</h3>
+                    <div>
+                        Welcome to the website. If you're here, you're likely looking to find random words. Random Word Generator is the perfect tool to help you do this. While this tool isn't a word creator, it is a word generator that will generate random words for a variety
+                        of activities or uses. Even better, it allows you to adjust the parameters of the random words to best fit your needs.
+                    </div>
+                    <div class="greenbutton" id="Button_shop_now">
+                        Shop now
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="text_center">Our product</h1>
+        <div id="Button_product">
+            <div class="greenbutton">
+                Best-sellers
+            </div>
+            <div class="whitebutton">
+                New products
+            </div>
+        </div>
+        <div id="Product">
+            <div class="Product_class" id="Product_01">
+                <img src="Picture/Image 1.png" alt="">
+                <h3>Product Title</h3>
+                <p>This is a product of ours</p>
+                <h2 style="display: inline-block;">$32</h2>
+                <p style="display: inline;">$28</p>
+                <img src="Picture/Button 1.png" alt="" class="Order_Cart">
+            </div>
+            <div class=" Product_class " id="Product_02 ">
+                <img src="Picture/Image 1 (1).png" alt=" ">
+                <h3>Product Title</h3>
+                <p>This is a product of ours</p>
+                <h2 style="display: inline-block;">$22</h2>
+                <p style="display: inline;">$28</p>
+                <img src="Picture/Button 1.png" alt="" class="Order_Cart">
+            </div>
+            <div class="Product_class " id="Product_03 ">
+                <img src="Picture/Image 1 (2).png" alt=" ">
+                <h3>Product Title</h3>
+                <p>This is a product of ours</p>
+                <h2 style="display: inline-block;">$18</h2>
+                <p style="display: inline;">$28</p>
+                <img src="Picture/Button 1.png" alt="" class="Order_Cart">
+            </div>
+            <div class="Product_class " id="Product_04 ">
+                <img src="Picture/Image 1 (3).png " alt=" ">
+                <h3>Product Title</h3>
+                <p>This is a product of ours</p>
+                <h2 style="display: inline-block;">$48</h2>
+                <p style="display: inline;">$56</p>
+                <img src="Picture/Button 1.png" alt="" class="Order_Cart">
+            </div>
+        </div>
+        <div class = "container">
+            <h1 style="left:44%;position: absolute">Event promotion</h1>
+            <div class="greentext" style="float:right">See all</div>
+        </div>
+        <div id="Event Promotion " class = "flex_center">
+            <div id = "Event_01" class = "container">
+                <img src="Picture/Image 1 (4).png" alt="">
+                <div class="text_position_01">
+                    <h3>Relaxing & Pampering</h3>
+                    <div>
+                        Sản phẩm (product) là khái niệm dùng để chỉ hàng hoá và dịch vụ do nền kinh tế sản xuất ra.
+                    </div>
+                    <div class="greenbutton" id="Button_shop_now">
+                        Explore
+                    </div>
+                </div>
+            </div>
+            <div id = "Event_02" class = "container">
+                <img src="Picture/Image 1 (5).png" alt="">
+                <div class="text_position_01">
+                    <h3>Smooth & Bright Skin</h3>
+                    <div>
+                        Sản phẩm (product) là khái niệm dùng để chỉ hàng hoá và dịch vụ do nền kinh tế sản xuất ra.
+                    </div>
+                    <div class="greenbutton" id="Button_shop_now">
+                        Explore
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "container">
+            <h1 style="left:48%;position: absolute">Our story</h1>
+            <div class="greentext" style="float:right">See all</div>
+        </div>
+        <div id="Our story ">
+            <div class = "container">
+                <img src="Picture/Image 1 (6).png" alt="" id="video">
+                <div class = "blackbutton">Watch video ▷</div>
+            </div>
+        </div>
+        <div id="News" class="flex_center" style="margin-top: 10%;">
+            <div class = "tab">
+                <div><h3>Read what's new</h3></div>
+                <div style="bottom:0px">Use this method to center an element vertically and horizontally if you don't know its exact dimensions and can't use Flexbox.</div>
+                <div class = "WhiteTextGreenBorderButton" id = "Explore_Now">Explore more</div>
+                <img src="Picture/Button 1 (4).png" alt="" id="Sub_Button_01" style="bottom: 0px;">
+                <img src="Picture/Button 1 (5).png" alt="" id="Sub_Button_02" style="bottom: 0px;">
+            </div>
+            <div class = "tab">
+                <img src="Picture/Image 1 (7).png" alt="">
+                <h3>Product Title thod to center an element vertical</h3>
+                <p>3/11/2003</p>
+            </div>
+            <div class = "tab">
+                <img src="Picture/Image 1 (8).png" alt="">
+                <h3>Product Title thod to center an element vertical</h3>
+                <p>12/2/2003</p>
+            </div>
+        </div>
+        <div id="TitleInstagram " class = "container" style="margin-bottom: 5%;">
+            <h1 style="left:48%;position: absolute">Instagram</h1>
+            <p style="left:52%;margin-top: 3%; position: absolute">@yourInstagram_Official</p>
+        </div>
+
+        <div id="Image_instagram" class="grid_container">
+            <img src="Picture/Image 1 (9).png" alt="">
+            <img src="Picture/Image 1 (10).png" alt="">
+            <img src="Picture/Image 1 (11).png" alt="">
+            <img src="Picture/Image 1 (12).png" alt="">
+            <img src="Picture/Image 1 (13).png" alt="">
+            <img src="Picture/Image 1 (14).png" alt="">
+            <img src="Picture/Image 1 (15).png" alt="">
+            <img src="Picture/Image 1 (16).png" alt="">
+        </div>
+        <div id="Footer">
+            <div id="Footer_Left">
+                <div class="Footer_Left_Tab" name="About">
+                    <div><h2>About</h2></div>
+                    <div class="Footer_Left_Item">Home</div>
+                    <div class="Footer_Left_Item">Shop</div>
+                    <div class="Footer_Left_Item">Our story</div>
+                    <div class="Footer_Left_Item">Blogs</div>
+                    <select name="Language" id="Language" class="Footer_Left_Item">
+                        <option value="English">English</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                      </select>
+                </div>
+                <div class="Footer_Left_Tab" name="Help">
+                    <div><h2>Help</h2></div>
+                    <div class="Footer_Left_Item" class="Footer_Left_Item">Shopping & Returns</div>
+                    <div class="Footer_Left_Item" class="Footer_Left_Item">Track Order</div>
+                    <div class="Footer_Left_Item" class="Footer_Left_Item">FAQs</div>
+                </div>
+                <div class="Footer_Left_Tab" name="Contact">
+                    <div><h2>Contact</h2></div>
+                    <div class="Footer_Left_Item">Phone:</div>
+                    <div class="Footer_Left_Item">(+1) 123 456 7893</div>
+                    <div class="Footer_Left_Item">Email:</div>
+                    <div class="Footer_Left_Item">name@email.com</div>
+                </div>
+            </div>
+            <div id="Footer_Right">
+                <h2 style="margin: 0px;">Receive news promotions</h2>
+                <p style="margin: 0px;">Dosi oasi iou uah ksja asdl dle</p>
+                <div id="Input_Email_Tag"><input type="text" placeholder="📧 Input your email" style="width: 100%;"><div class="greenbutton" id="Button_Subcribe">Subcribe</div></div>
+                <div class="flex">
+                    <img src="Picture/Twitter 1.png" alt="">
+                    <img src="Picture/Facebook 1.png" alt="">
+                    <img src="Picture/LinkedIn 1.png" alt="">
+                    <img src="Picture/YouTube 1.png" alt="">
+                </div>
+                <div class ="flex">
+                    <div>©2022 Brand,Inc.</div>
+                        <li>Privacy</li>
+                        <li>Terms</li>
+                        <li>Sitemap</li>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
